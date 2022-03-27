@@ -33,8 +33,7 @@ class BatchTask(Task):
         job_config['cpu_num'] = batch_instance.instance_config['cpus'] 
 
         #submit job
-        batch_executor = BatchExecutor(clusterConfigFile="/Users/qinjielin/Downloads/NWU/aws_ws/boto_cluster/results/test_cluster/cluster_info.yaml",
-                                        debugLog=False)
+        batch_executor = BatchExecutor()
         batch_executor.submit_job(job_config=job_config, log_output=True)
 
         return batch_executor

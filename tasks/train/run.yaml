@@ -1,0 +1,8 @@
+image_name: qinjielin/python3.6:v0.4
+entry_cmd:
+- python
+- /root/work_ws/example/batch_example1.py
+mount_config:
+- efs_name: code_efs
+  efs_path: /user3/
+  container_path: /root/work_ws

@@ -24,6 +24,7 @@ class BatchTask(Task):
     def run(self, 
             batch_instance: BatchInstance=None,
             target_path: str=None,
+            cluster_config_file: str="../../.cluster/cluster.config",
     ):
         # TODO add argument to python command
         job_config = load_config(target_path+"/run.yaml")
@@ -33,7 +34,7 @@ class BatchTask(Task):
         job_config['cpu_num'] = batch_instance.instance_config['cpus'] 
 
         #submit job
-        batch_executor = BatchExecutor()
+        batch_executor = BatchExecutor(clusterConfigFile=cluster_config_file)
         batch_executor.submit_job(job_config=job_config, log_output=True)
 
         return batch_executor

@@ -1,7 +1,7 @@
 image_name: qinjielin/python3.6:v0.4
 entry_cmd:
 - python
-- /root/work_ws/boto_pipelines/tasks/train/train_model.py
+- /root/work_ws/tasks/train/train_model.py
 mount_config:
 - efs_name: code_efs
   efs_path: /user3/

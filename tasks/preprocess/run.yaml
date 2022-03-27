@@ -2,6 +2,10 @@ image_name: qinjielin/python3.6:v0.4
 entry_cmd:
 - python
 - /root/work_ws/tasks/preprocess/preprocess_data.py
+- --input_path
+- /root/work_ws/data/values.csv
+- --output_path
+- /root/work_ws/data/tvalues.csv
 mount_config:
 - efs_name: code_efs
   efs_path: /user3/

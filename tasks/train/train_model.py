@@ -7,6 +7,7 @@ parser.add_argument('--model_path', type=str, default="./data/model.csv")
 args = parser.parse_args()
 
 def train(data_path,model_path):
+    print("training model...")
     with open(data_path, 'r') as f:
         text = f.readline().strip()
     data = [int(i) for i in text.split(",")]

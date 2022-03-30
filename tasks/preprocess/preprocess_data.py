@@ -7,6 +7,8 @@ parser.add_argument('--output_path', type=str, default="./data/tvalues.csv")
 args = parser.parse_args()
 
 def preprocess_data(input_path, output_path):
+    print("preprocessing data")
+
     with open(input_path, 'r') as f:
         text = f.readline().strip()
     data = [int(i) for i in text.split(",")]

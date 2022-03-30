@@ -6,6 +6,7 @@ parser.add_argument('--model_path', type=str, default="./data/model.csv")
 args = parser.parse_args()
 
 def test(model_path):
+    print("running inference...")
     with open(model_path, 'r') as f:
         text = f.readline().strip()
     data = [int(i) for i in text.split(",")]
